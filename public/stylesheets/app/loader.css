@@ -1,0 +1,30 @@
+/* Hide everything until JavaScipt has loaded to prevent FoUC */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+main .loader {
+  display: none;
+}
+
+main.loading .loader {
+  display: block;
+}
+
+main.loading .content {
+  display: none;
+}
+
+main.loading .alerts {
+  display: none;
+}
+
+main .loader {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+main .loader .spinner-container {
+  text-align: center;
+}
+

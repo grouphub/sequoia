@@ -1,0 +1,31 @@
+.navbar {
+  background: linear-gradient(180deg, #057ff4, #02417d 100%);
+  background-color: #003c82;
+  border-bottom: none;
+}
+
+.navbar button.navbar-toggle {
+  border: 1px solid white;
+}
+
+.navbar button.navbar-toggle:hover,
+.navbar button.navbar-toggle:focus {
+  background-color: white;
+}
+
+.navbar button.navbar-toggle:hover span,
+.navbar button.navbar-toggle:focus span {
+  background-color: #057ff4;
+}
+
+.navbar .container li a,
+.navbar .container .navbar-header a {
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .navbar .container .navbar-collapse {
+    border-top: 1px solid white;
+  }
+}
+
