@@ -1,6 +1,6 @@
 var app = angular.module('pickerApp');
 
-app.controller('SignupController', [
+app.controller('DoctorsController', [
   '$scope',
   '$cookieStore',
   function ($scope, $cookieStore) {
