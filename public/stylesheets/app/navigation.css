@@ -5,12 +5,21 @@
 }
 
 .navbar button.navbar-toggle {
-  border: 1px solid white;
+  border: 1px solid #82c2fd;
+}
+
+.navbar button.navbar-toggle span.icon-bar {
+  background-color: #82c2fd;
+}
+
+.navbar button.navbar-toggle:hover span.icon-bar,
+.navbar button.navbar-toggle:focus span.icon-bar {
+  background-color: #057ff4;
 }
 
 .navbar button.navbar-toggle:hover,
 .navbar button.navbar-toggle:focus {
-  background-color: white;
+  background-color: #82c2fd;
 }
 
 .navbar button.navbar-toggle:hover span,
@@ -20,12 +29,12 @@
 
 .navbar .container li a,
 .navbar .container .navbar-header a {
-  color: white;
+  color: #82c2fd;
 }
 
 @media (max-width: 767px) {
   .navbar .container .navbar-collapse {
-    border-top: 1px solid white;
+    border-top: 1px solid #82c2fd;
   }
 }
 
