@@ -21,10 +21,6 @@ app.config([
         templateUrl: '/templates/users/show.html',
         controller: 'UsersShowController'
       })
-      .when('/plans', {
-        templateUrl: '/templates/plans.html',
-        controller: 'PlansController'
-      })
       .when('/signup', {
         templateUrl: '/templates/signup.html',
         controller: 'SignupController'
