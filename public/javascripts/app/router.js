@@ -9,10 +9,6 @@ app.config([
         templateUrl: '/templates/home.html',
         controller: 'HomeController'
       })
-      .when('/plans', {
-        templateUrl: '/templates/plans.html',
-        controller: 'PlansController'
-      })
       .when('/users/signin', {
         templateUrl: '/templates/users/signin.html',
         controller: 'UsersSigninController'
@@ -24,6 +20,34 @@ app.config([
       .when('/users/:userId', {
         templateUrl: '/templates/users/show.html',
         controller: 'UsersShowController'
+      })
+      .when('/plans', {
+        templateUrl: '/templates/plans.html',
+        controller: 'PlansController'
+      })
+      .when('/signup', {
+        templateUrl: '/templates/signup.html',
+        controller: 'SignupController'
+      })
+      .when('/basic', {
+        templateUrl: '/templates/basic.html',
+        controller: 'BasicController'
+      })
+      .when('/doctors', {
+        templateUrl: '/templates/doctors.html',
+        controller: 'DoctorsController'
+      })
+      .when('/recommendations', {
+        templateUrl: '/templates/recommendations.html',
+        controller: 'RecommendationsController'
+      })
+      .when('/details', {
+        templateUrl: '/templates/details.html',
+        controller: 'DetailsController'
+      })
+      .when('/success', {
+        templateUrl: '/templates/success.html',
+        controller: 'SuccessController'
       })
       .otherwise({
         redirectTo: '/'
