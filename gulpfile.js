@@ -44,6 +44,19 @@ function kill (pid) {
   });
 }
 
+function fetchZips () {
+  return new Promise(function (resolve, reject) {
+    childProcess.exec('ruby data/fetch_zips.rb', function (err, stdout, stderr) {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve();
+    });
+  });
+}
+
 gulp.task('serve', function () {
   app.listen(config.serverPort, function () {
     console.log('App is listening at "http://0.0.0.0:%s" in the "%s" environment.', config.serverPort, config.environment);
@@ -93,6 +106,10 @@ gulp.task('killall', function () {
           console.error('Killing any running watchers.', err); 
         })
     });
+});
+
+gulp.task('fetch-zips', function () {
+  return fetchZips();
 });
 
 gulp.task('default', ['serve', 'watch'], function () {

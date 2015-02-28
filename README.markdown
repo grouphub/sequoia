@@ -21,3 +21,9 @@
     # Open in the browser.
     open 'http://localhost:9292'
 
+    # If something goes wrong and you need to kill the server and the watcher
+    # manually...
+    #
+    . ./bashrc
+    gulp killall
+
