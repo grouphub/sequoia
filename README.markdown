@@ -27,3 +27,8 @@
     . ./bashrc
     gulp killall
 
+    # Re-fetch zipcode data
+    #
+    . ./bashrc
+    gulp fetch-zips
+
