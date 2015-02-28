@@ -4,7 +4,7 @@ app.controller('PlansController', [
   '$scope',
   '$cookieStore',
   function ($scope, $cookieStore) {
-
+    $scope.ready();
   }
 ]);
 
