@@ -90,6 +90,10 @@ app.controller('MainController', [
         });
     };
 
+    // =================
+    // Jumbotron methods
+    // =================
+
     $scope.setJumbotron = function (name) {
       $scope.jumbotron = name;
     };
@@ -97,6 +101,17 @@ app.controller('MainController', [
     $scope.clearJumbotron = function () {
       $scope.jumbotron = undefined;
     };
+
+    // ================
+    // Enrollment stuff
+    // ================
+
+    $scope.enrollmentForm = {
+      age: undefined,
+      zipcode: undefined
+    };
+
+    $scope.plans = undefined;
   }
 ]);
 

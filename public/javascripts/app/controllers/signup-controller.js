@@ -15,14 +15,14 @@ app.controller('SignupController', [
     $scope.submit = function () {
       $http
         .post('/api/v1/users.json', $scope.form)
-        .then(function(response) {
+        .then(function (response) {
           window.picker.user = response.data.user;
 
           flashesFactory.add('success', 'Created your account!');
 
           $location.path('/basic')
         })
-        .catch(function(response) {
+        .catch(function (response) {
           var message = (response.data && response.data.error) ?
             response.data.error :
             'An error occurred.';
