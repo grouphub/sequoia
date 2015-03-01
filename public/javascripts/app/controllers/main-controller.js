@@ -106,11 +106,6 @@ app.controller('MainController', [
     // Enrollment stuff
     // ================
 
-    $scope.enrollmentForm = {
-      age: undefined,
-      zipcode: undefined
-    };
-
     $scope.plans = undefined;
   }
 ]);

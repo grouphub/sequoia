@@ -6,26 +6,34 @@ app.controller('BasicController', [
   '$location',
   'flashesFactory',
   function ($scope, $cookieStore, $location, flashesFactory) {
+    $scope.form = {
+      age: undefined,
+      zipcode: undefined
+    };
+
     $scope.submit = function () {
-      if (_($scope.enrollmentForm.age).isEmpty()) {
+      if (_($scope.form.age).isEmpty()) {
         flashesFactory.add('danger', 'Age must be provided.');
         return;
       }
 
-      if (_($scope.enrollmentForm.zipcode).isEmpty()) {
+      if (_($scope.form.zipcode).isEmpty()) {
         flashesFactory.add('danger', 'Zip code must be provided.');
         return;
       }
 
-      if (!$scope.enrollmentForm.age.match(/\d+/)) {
+      if (!$scope.form.age.match(/\d+/)) {
         flashesFactory.add('danger', 'Please enter a valid age.');
         return;
       }
 
-      if (!$scope.enrollmentForm.zipcode.match(/\d\d\d\d\d/)) {
+      if (!$scope.form.zipcode.match(/\d\d\d\d\d/)) {
         flashesFactory.add('danger', 'Please enter a valid zip code.');
         return;
       }
+
+      $cookieStore.put('age', $scope.form.age);
+      $cookieStore.put('zipcode', $scope.form.zipcode);
 
       $location.path('/doctors')
     };

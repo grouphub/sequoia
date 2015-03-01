@@ -7,26 +7,22 @@ app.controller('DoctorsController', [
   '$cookieStore',
   'flashesFactory',
   function ($scope, $http, $location, $cookieStore, flashesFactory) {
-    var email;
-    var age;
-    var zipcode;
+    var age = $cookieStore.get('age');
+    var zipcode = $cookieStore.get('zipcode');
 
     if (!picker.user) {
       // ...
     }
 
-    if (_($scope.enrollmentForm.age).isEmpty()) {
+    if (_(age).isEmpty()) {
       flashesFactory.add('danger', 'Age must be provided.');
       return;
     }
 
-    if (_($scope.enrollmentForm.zipcode).isEmpty()) {
+    if (_(zipcode).isEmpty()) {
       flashesFactory.add('danger', 'Zip code must be provided.');
       return;
     }
-
-    age = $scope.enrollmentForm.age;
-    zipcode = $scope.enrollmentForm.zipcode;
 
     $http
       .get('/api/v1/plans.json?zipcode=' + zipcode + '&age=' + age)
