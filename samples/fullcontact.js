@@ -2,6 +2,8 @@
 
 var FullContact = require('fullcontact');
 
+var config = require('../lib/config');
+
 //
 // The constructors are directly exposed on the FullContact constructor:
 //
@@ -12,17 +14,17 @@ FullContact.Name;
 
 //To create a new client you simply need to construct the module with your FullContact API key:
 
-var fullcontact = new FullContact("a6810e0c84ec72d1");
+var fullcontact = new FullContact(config.fullcontactKey);
 
 
 //Alternatively you can also use the provided createClient method, is that's how you roll.
 
-var fullcontact = FullContact.createClient("a6810e0c84ec72d1");
+var fullcontact = FullContact.createClient(config.fullcontactKey);
 
 //
 // Or just call it directly:
 //
-var fullcontact = require('fullcontact').createClient("a6810e0c84ec72d1");
+var fullcontact = require('fullcontact').createClient(config.fullcontactKey);
 
 //Retrieves contact information by e-mail address.
 
