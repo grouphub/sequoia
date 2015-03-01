@@ -104,6 +104,18 @@
       </div>
     </header>
 
+    <div class="jumbotron" ng-if="jumbotron === 'home'">
+      <h1>Let's pick the right plan for you!</h1>
+      <h2>Use our plan picker to make it super easy.</h2><br>
+      <a class="btn btn-success btn-lg" href="/basic" role="button" ng-if="isSignedin()">Get Started Now</a>
+      <a class="btn btn-success btn-lg" href="/signup" role="button" ng-if="!isSignedin()">Get Started Now</a>
+    </div>
+
+    <div class="jumbotron" ng-if="jumbotron === 'signup'">
+      <h1>Let's start now</h1>
+      <h2>Answer a few easy questions, and you will have health care!</h2>
+    </div>
+
     <main ng-class="{loading: isLoading}">
       <div class="container loader">
         <div class="col-sm-12">

@@ -23,6 +23,8 @@ app.controller('UsersShowController', [
         flashesFactory.add('danger', message);
       });
 
+    $scope.clearJumbotron();
+
     $scope.ready();
   }
 ]);

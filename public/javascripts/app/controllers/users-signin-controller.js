@@ -30,6 +30,8 @@ app.controller('UsersSigninController', [
         });
     };
 
+    $scope.clearJumbotron();
+
     $scope.ready();
   }
 ]);
