@@ -25,6 +25,19 @@ app.controller('DoctorsController', [
       return joinedName;
     };
 
+    $scope.averageRating = function (doctor) {
+      var rating = _(doctor.ratings).reduce(function (acc, rating) {
+        acc += rating.rating;
+        return acc;
+      }, 0) / doctor.ratings.length;
+
+      if (isNaN(rating)) {
+        return 0;
+      }
+
+      return rating;
+    };
+
     $scope.rate = function (doctor) {
       var list = [];
       var rating;
@@ -34,10 +47,7 @@ app.controller('DoctorsController', [
       }
 
       // Average rating
-      rating = _(doctor.ratings).reduce(function (acc, rating) {
-        acc += rating.rating;
-        return acc;
-      }, 0) / doctor.ratings.length;
+      rating = $scope.averageRating(doctor);
 
       if (!rating) {
         return;
@@ -103,6 +113,39 @@ app.controller('DoctorsController', [
       }
     };
 
+    $scope.searchDoctors = undefined;
+    $scope.form = {
+      query: undefined
+    };
+    $scope.search = function () {
+      if ($scope.form.query.length === 0) {
+        $scope.topDoctors = $scope.plans.doctors.slice($scope.offset, $scope.offset + 10);
+        return;
+      }
+
+      $scope.topDoctors = _($scope.plans.doctors).select(function (doctor) {
+        return $scope.name(doctor).match(new RegExp($scope.form.query, 'i'));
+      });
+    }
+
+    $scope.previousDoctors = function () {
+      if ($scope.offset === 0) {
+        return;
+      }
+
+      $scope.offset -= 10;
+      $scope.topDoctors = $scope.plans.doctors.slice($scope.offset, $scope.offset + 10);
+    };
+
+    $scope.nextDoctors = function () {
+      if ($scope.offset + 10 > $scope.plans.doctors.length) {
+        return;
+      }
+
+      $scope.offset += 10;
+      $scope.topDoctors = $scope.plans.doctors.slice($scope.offset, $scope.offset + 10);
+    };
+
     age = $cookieStore.get('age');
     zipcode = $cookieStore.get('zipcode');
 
@@ -125,6 +168,15 @@ app.controller('DoctorsController', [
       .then(function (response) {
         $scope.plans = response.data;
         window.picker.plans = $scope.plans;
+
+        $scope.plans.doctors = _($scope.plans.doctors)
+          .sortBy(function (doctor) {
+            return $scope.averageRating(doctor);
+          })
+          .reverse();
+
+        $scope.topDoctors = $scope.plans.doctors.slice(0, 10);
+        $scope.offset = 0;
 
         $scope.ready();
       })
