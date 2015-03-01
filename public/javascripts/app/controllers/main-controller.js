@@ -117,14 +117,11 @@ app.controller('MainController', [
     // ================
 
     $scope.callBroker = function() {
-
-      sinchClient = new SinchClient({
-          applicationKey: '3b82c382-1a34-41cb-bf38-42eba9d8d7e4',
-          applicationSecret: 's9wKLFx5UUWQ0Py+Vgj5Cg==',
-          capabilities: {calling: true},
-      });
-
       function showCall() {
+        var callClient = sinchClient.getCallClient();
+        var call = callClient.callPhoneNumber(number);
+        call.addEventListener(callListener);
+
         console.log('showing call', sinchClient. arguments)
       }
 
@@ -136,29 +133,37 @@ app.controller('MainController', [
         console.log('error call', sinchClient, arguments)
       }
 
-      var username = 'foo1234'
-      var password = 'foo1234'
+      var username = 'rjungemann'
+      var password = 'magelore'
+      var number = '+14155191862';
       var callUsername = ''
+      var loginObject = {
+        username: username,
+        password: password
+      };
+      var sinchClient = new SinchClient({
+          applicationKey: '3b82c382-1a34-41cb-bf38-42eba9d8d7e4',
+          applicationSecret: 's9wKLFx5UUWQ0Py+Vgj5Cg==',
+          capabilities: {
+            calling: true
+          }
+      });
+      var callListener = {
+        onCallProgressing: function (call) {
+          console.log('call progressing', call);
+        },
+        onCallEstablished: function (call) {
+          console.log('call established', call);
+        },
+        onCallEnded: function (call) {
+          console.log('call ended', call);
+        },
+      };
 
-       var loginObject = {username: username, password: password};
-        sinchClient.newUser(loginObject, function(ticket) {
-          sinchClient.start(ticket, function() {
-            global_username = username;
-            showCall();
-          }).fail(handleError);
-        }).fail(handleError);
-
-        var callClient = sinchClient.getCallClient();
-
-        call = callClient.callPhoneNumber($('+14159882111').val());
-
-        call.addEventListener(callListener);
-
-      var callClient = sinchClient.getCallClient();
-      var call;
-
-      call = callClient.callUser(callUsername);
-      call.addEventListener(callListener);
+      sinchClient.start(loginObject, function () {
+        console.log('started', arguments);
+        showCall();
+      }).fail(handleError);
     }
   }
 ]);
