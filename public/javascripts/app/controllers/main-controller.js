@@ -116,8 +116,8 @@ app.controller('MainController', [
     // Enrollment stuff
     // ================
 
-    $scope.callBroker = function() {
-      function showCall() {
+    $scope.call = function (number) {
+      function showCall () {
         var callClient = sinchClient.getCallClient();
         var call = callClient.callPhoneNumber(number);
         call.addEventListener(callListener);
@@ -125,17 +125,16 @@ app.controller('MainController', [
         console.log('showing call', sinchClient. arguments)
       }
 
-      function handleError() {
+      function handleError () {
         console.log('error call', sinchClient, arguments)
       }
 
-      function callListener() {
+      function callListener () {
         console.log('error call', sinchClient, arguments)
       }
 
       var username = 'rjungemann'
       var password = 'magelore'
-      var number = '+14155191862';
       var callUsername = ''
       var loginObject = {
         username: username,
@@ -164,7 +163,15 @@ app.controller('MainController', [
         console.log('started', arguments);
         showCall();
       }).fail(handleError);
-    }
+    };
+
+    $scope.callBroker = function () {
+      $scope.call('+14155191862');
+    };
+
+    $scope.callDoctor = function (doctor) {
+      $scope.call('+14155191862');
+    };
   }
 ]);
 
