@@ -12,23 +12,23 @@ header.navbar {
   text-shadow: 0 1px .5px #000;
 }
 .jumbotron h2 {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .sub-jumbotron {
-	margin: -45px -15px -15px -15px;
-	min-height: 240px;
-	background-color: #eee;
+  margin: -45px -15px -15px -15px;
+  min-height: 240px;
+  background-color: #eee;
 }
 .sub-jumbotron h2 {
-	margin-top: 60px;
-	color: #000;
-	font-size: 27px;
+  margin-top: 60px;
+  color: #000;
+  font-size: 27px;
 }
 .sub-jumbotron p {
-	color: #555;
-	font-size: 18px;
-	margin-left: 200px;
-	margin-right: 200px;
+  color: #555;
+  font-size: 18px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 main {
@@ -50,8 +50,8 @@ main {
 }
 
 .doctor-name {
-	font-size: 17.5px;
-	font-weight: bold;
+  font-size: 17.5px;
+  font-weight: bold;
 }
 
 dt {
@@ -88,28 +88,40 @@ img {
 }
 
 .success-tron {
-	background-color: #5cb85c;
-	font-size: 17px;
+  background-color: #5cb85c;
+  font-size: 17px;
+  border-radius: 10px;
 }
 
 .success-tron h2 {
-	color: #fff;
+  color: #fff;
 }
 
 .line-height-smaller {
-	padding-top: 2px;
-	line-height: 1.09;
+  padding-top: 2px;
+  line-height: 1.09;
 }
 
 .col-md-3.doctors-profile {
-	padding-left: 30px;
+  padding-left: 30px;
 }
 
+@media (min-width: 768px) {
+  .faux-modal {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+       -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
 
+    margin-left: 20%;
+    margin-right: 20%;
 
-
-
-
-
-
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    border-radius: 4px;
+  }
+}
 
