@@ -44,6 +44,7 @@ main {
 }
 .doctors-profile {
   min-height: 377px;
+	max-height: 377px;
   background-color: #f0eded;
   padding-top: 10px;
   border: 1px solid #ddd;
