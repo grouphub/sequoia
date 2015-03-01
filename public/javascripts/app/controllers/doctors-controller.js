@@ -24,6 +24,99 @@ app.controller('DoctorsController', [
       return;
     }
 
+    $scope.name = function (doctor) {
+      var middleName = (doctor.profile.middle_name && doctor.profile.middle_name.length === 1) ?
+        (doctor.profile.middle_name + '.') :
+        (doctor.profile.middle_name);
+
+      var names = [doctor.profile.first_name, middleName, doctor.profile.last_name];
+      var joinedName = _(names).compact().join(' ');
+
+      if (doctor.profile.title) {
+        joinedName += ', ' + doctor.profile.title;
+      }
+
+      return joinedName;
+    };
+
+    $scope.rate = function (doctor) {
+      var list = [];
+      var rating;
+
+      if (!doctor.ratings || !doctor.ratings[0]) {
+        return;
+      }
+
+      // Average rating
+      rating = _(doctor.ratings).reduce(function (acc, rating) {
+        acc += rating.rating;
+        return acc;
+      }, 0) / doctor.ratings.length;
+
+      if (!rating) {
+        return;
+      }
+
+      for (var i = 0; i < Math.floor(rating); i++) {
+        list.push('<i class="fa fa-star"></i>');
+      }
+
+      if (Math.floor(rating) !== Math.round(rating)) {
+        list.push('<i class="fa fa-star-half"></i>');
+      }
+
+      return list.join('');
+    };
+
+    $scope.specialties = function (doctor) {
+      return _(doctor.specialties)
+        .map(function (specialty) {
+          return specialty.name;
+        })
+        .join(', ');
+    };
+
+    $scope.languages = function (doctor) {
+      return _(doctor.profile.languages)
+        .map(function (language) {
+          return language.name;
+        })
+        .join(', ');
+    }
+
+    $scope.practices = function (doctor) {
+      return _(doctor.practices)
+        .map(function (practice) {
+          var addressData = practice.visit_address;
+          var str = '';
+
+          if (addressData.street) {
+            str += addressData.street + '<br>';
+          }
+
+          if (addressData.street2) {
+            str += addressData.street2 + '<br>';
+          }
+
+          str += addressData.city + ', ' + addressData.state + ' ' + addressData.zip;
+
+          return '<p class="practice">' + str + '</p>';
+        })
+        .join(' ');
+    }
+
+    $scope.currentDoctor = undefined;
+    $scope.isHovering = true;
+    $scope.doctorClicked = function (doctor) {
+      $scope.currentDoctor = doctor;
+      $scope.isHovering = false;
+    };
+    $scope.doctorHovered = function (doctor) {
+      if ($scope.isHovering) {
+        $scope.currentDoctor = doctor;
+      }
+    };
+
     $http
       .get('/api/v1/plans.json?zipcode=' + zipcode + '&age=' + age)
       .then(function (response) {
