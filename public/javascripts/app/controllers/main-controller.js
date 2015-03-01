@@ -111,6 +111,20 @@ app.controller('MainController', [
     // ================
 
     $scope.plans = undefined;
+
+     // ================
+    // Enrollment stuff
+    // ================
+
+    $scope.callBroker = function() {
+      sinchClient = new SinchClient({
+          applicationKey: '3b82c382-1a34-41cb-bf38-42eba9d8d7e4',
+          capabilities: {calling: true},
+      });
+
+      var callClient = sinchClient.getCallClient();
+      var call;
+    }
   }
 ]);
 
