@@ -113,6 +113,21 @@ app.controller('DoctorsController', [
       }
     };
 
+    $scope.searchDoctors = undefined;
+    $scope.form = {
+      query: undefined
+    };
+    $scope.search = function () {
+      if ($scope.form.query.length === 0) {
+        $scope.topDoctors = $scope.plans.doctors.slice($scope.offset, $scope.offset + 10);
+        return;
+      }
+
+      $scope.topDoctors = _($scope.plans.doctors).select(function (doctor) {
+        return $scope.name(doctor).match(new RegExp($scope.form.query, 'i'));
+      });
+    }
+
     $scope.previousDoctors = function () {
       if ($scope.offset === 0) {
         return;

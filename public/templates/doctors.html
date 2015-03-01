@@ -1,7 +1,7 @@
 <h3>Select the doctor that you want</h3>
 
 <form>
-  <input type="text" class="form-control" id="InputEmail" placeholder="Search">
+  <input type="search" class="form-control" id="InputEmail" ng-change="search()" ng-model="form.query" placeholder="Search for a doctor&hellip;">
 </form>
 
 <div class="doctors-row">
