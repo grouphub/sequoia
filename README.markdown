@@ -13,7 +13,8 @@
     npm install
 
     # Seed the database.
-    node lib/seeds.js
+    . ./bashrc
+    gulp seed
 
     # Start the server.
     npm start

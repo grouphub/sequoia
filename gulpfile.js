@@ -1,8 +1,12 @@
+var fs = require('fs');
 var path = require('path');
 var childProcess = require('child_process');
 var gulp = require('gulp');
 var Promise = require('bluebird');
 var tinylr = require('tiny-lr');
+var mongo = require('mongod');
+var bcrypt = require('bcrypt-nodejs');
+
 var app = require('./lib/app');
 var config = require('./lib/config');
 
@@ -112,7 +116,54 @@ gulp.task('fetch-zips', function () {
   return fetchZips();
 });
 
-gulp.task('default', ['serve', 'watch'], function () {
+// Performs the following steps:
+//
+//   * Remove existing users.
+//   * Remove existing users.
+//   * Seed the new plans.
+//   * Seed the new users.
+//   * Manually close the database to prevent the script from hanging.
+//
+gulp.task('seed', function () {
+  function log (message) {
+    return new Promise(function (resolve, reject) {
+      console.log(message);
+      resolve();
+    });
+  }
 
+  var plans = [
+    {
+      name: 'First Plan'
+    }
+  ];
+
+  var users = [
+    {
+      email: 'admin@grouphub.io',
+      password: bcrypt.hashSync('testtest')
+    }
+  ];
+
+  var database = mongo(config.databaseUrl, config.databaseTables);
+
+  Promise.resolve()
+    .then(log('Dropping existing plans...'))
+    .then(database.plans.remove())
+    .then(log('Dropping existing users...'))
+    .then(database.users.remove())
+    .then(log('Inserting new plans...'))
+    .then(database.plans.insert(plans))
+    .then(log('Inserting new users...'))
+    .then(database.users.insert(users))
+    .then(log('Closing the database...'))
+    .catch(function (error) {
+      console.error(error);
+    })
+    .then(function () {
+      database.close()
+    });
 });
+
+gulp.task('default', ['serve', 'watch']);
 
