@@ -37,6 +37,7 @@
       <thead>
         <tr>
           <th>Name</th>
+          <th>Specialties</th>
           <th>Rating</th>
         </tr>
       </thead>
@@ -44,6 +45,7 @@
       <tbody>
         <tr class="doctor" ng-repeat="doctor in topDoctors" ng-class="{current: doctor === currentDoctor}" ng-click="doctorClicked(doctor)" ng-mouseover="doctorHovered(doctor)">
           <td>{{name(doctor)}}</td>
+          <td>{{specialties(doctor)}}</td>
           <td ng-bind-html="rate(doctor)"></td>
         </tr>
 
