@@ -4,7 +4,7 @@ app.controller('SuccessController', [
   '$scope',
   '$cookieStore',
   function ($scope, $cookieStore) {
-    $scope.clearJumbotron();
+    $scope.setJumbotron('success');
 
     $scope.ready();
   }
