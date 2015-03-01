@@ -49,10 +49,6 @@ app.config([
         templateUrl: '/templates/success.html',
         controller: 'SuccessController'
       })
-      .when('/menu', {
-        templateUrl: '/templates/menu.html',
-        controller: 'MenuController'
-      })
       .otherwise({
         redirectTo: '/'
       });
