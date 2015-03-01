@@ -11,23 +11,57 @@ header.navbar {
 .jumbotron h1, .jumbotron h2 {
   text-shadow: 0 1px .5px #000;
 }
+.jumbotron h2 {
+	margin-bottom: 30px;
+}
+.sub-jumbotron {
+	margin: -45px -15px -15px -15px;
+	min-height: 240px;
+	background-color: #eee;
+}
+.sub-jumbotron h2 {
+	margin-top: 60px;
+	color: #000;
+	font-size: 27px;
+}
+.sub-jumbotron p {
+	color: #555;
+	font-size: 18px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
 
 main {
   margin-top: 20px;
 }
 
 .main p {
-  font-size: 16px;
+  font-size: 18px;
 }
 .doctors-row {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.doctors-profile {
+  min-height: 377px;
+  background-color: #f0eded;
+  padding-top: 10px;
+  border: 1px solid #ddd;
+}
+
+.doctor-name {
+	font-size: 17.5px;
+	font-weight: bold;
+}
+
+dt {
+  margin-bottom: -5px;
+}
 .doctors-btn {
   float: right;
 }
 thead {
-  background-color: #057ff4;
+  background-color: #0071de;
   color: #bbdfff;
 }
 img {
@@ -37,7 +71,45 @@ img {
 .doctor-table .doctor {
   cursor: pointer;
 }
-.doctor-table .doctor.current {
-  cursor: pointer;
-  color: red;
+.doctor-table .doctor.current td{
+  background-color: #f0eded;
 }
+
+.view-details {
+  margin-top: 12px;
+}
+
+.doctors-row > .col-md-9 {
+  padding-right: 0;
+}
+
+.doctors-row .more {
+  text-align: center;
+}
+
+.success-tron {
+	background-color: #5cb85c;
+	font-size: 17px;
+}
+
+.success-tron h2 {
+	color: #fff;
+}
+
+.line-height-smaller {
+	padding-top: 2px;
+	line-height: 1.09;
+}
+
+.col-md-3.doctors-profile {
+	padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+

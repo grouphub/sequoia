@@ -102,21 +102,40 @@
             <li ng-if="isSignedin()">
               <a href="" ng-click="signout()">Sign Out</a>
             </li>
+
+            <li class="broker-button">
+              <a href="">Chat with a broker</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <div class="jumbotron" ng-if="jumbotron === 'home'">
-      <h1>Let's pick the right plan for you!</h1>
-      <h2>Use our plan picker to make it super easy.</h2><br>
+      <div class="row>">
+        <h1>Heath insurance enrollment made easy.</h1>
+        <h2>Use our plan picker to find the best plan for you!</h2>
+      </div>
+
       <a class="btn btn-success btn-lg" href="/basic" role="button" ng-if="isSignedin()">Get Started Now</a>
       <a class="btn btn-success btn-lg" href="/signup" role="button" ng-if="!isSignedin()">Get Started Now</a>
+    </div>
+
+    <div class="jumbotron" ng-if="jumbotron === 'home'">
+      <div class="row sub-jumbotron">
+        <h2>&#45; Complete enrollment in seconds &#45;</h2>
+        <p>With GroupHub, validate and submit enrollment applications to insurance carriers with the click of a button. You can check on application status in real time and be alerted the moment it's approved.</p>
+      </div>
     </div>
 
     <div class="jumbotron" ng-if="jumbotron === 'signup'">
       <h1>Let's start now</h1>
       <h2>Answer a few easy questions, and you will have health care!</h2>
+    </div>
+
+    <div class="jumbotron" ng-if="jumbotron === 'success'">
+      <h1>Congratulations!</h1>
+      <h2>Welcome to the new new era of health care.</h2>
     </div>
 
     <main ng-class="{loading: isLoading}">

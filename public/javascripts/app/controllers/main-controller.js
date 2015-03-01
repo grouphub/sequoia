@@ -24,6 +24,10 @@ app.controller('MainController', [
       $scope.isLoading = true;
     });
 
+    $scope.loading = function () {
+      $scope.isLoading = true;
+    };
+
     $scope.ready = function () {
       $timeout(function () {
         $scope.isLoading = false;
