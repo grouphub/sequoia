@@ -1,117 +1,19 @@
-<<<<<<< HEAD
-<div class="col-sm-12">
-
-	<div class="col-sm-6">
-							<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">Expand / Collapse All Rows</h3>
-								</div>
-					
-								<!-- Foo Table - Expand / Collapse All Rows -->
-								<!--===================================================-->
-								<div class="panel-body">
-									<div class="pad-btm">
-										<button id="demo-foo-collapse" class="btn btn-info">Collapse All</button>
-										<button id="demo-foo-expand" class="btn btn-warning">Expand All</button>
-									</div>
-									<table id="demo-foo-col-exp" class="table toggle-circle">
-										<thead>
-											<tr>
-												<th data-toggle="true">First Name</th>
-												<th>Last Name</th>
-												<th data-hide="all">Job Title</th>
-												<th data-hide="all">DOB</th>
-												<th data-hide="all">Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Isidra</td>
-												<td>Boudreaux</td>
-												<td>Traffic Court Referee</td>
-												<td>22 Jun 1972</td>
-												<td><span class="label label-table label-success">Active</span></td>
-											</tr>
-											<tr>
-												<td>Shona</td>
-												<td>Woldt</td>
-												<td>Airline Transport Pilot</td>
-												<td>3 Oct 1981</td>
-												<td><span class="label label-table label-dark">Disabled</span></td>
-											</tr>
-											<tr>
-												<td>Granville</td>
-												<td>Leonardo</td>
-												<td>Business Services Sales Representative</td>
-												<td>19 Apr 1969</td>
-												<td><span class="label label-table label-danger">Suspended</span></td>
-											</tr>
-											<tr>
-												<td>Easer</td>
-												<td>Dragoo</td>
-												<td>Drywall Stripper</td>
-												<td>13 Dec 1977</td>
-												<td><span class="label label-table label-success">Active</span></td>
-											</tr>
-											<tr>
-												<td>Maple</td>
-												<td>Halladay</td>
-												<td>Aviation Tactical Readiness Officer</td>
-												<td>30 Dec 1991</td>
-												<td><span class="label label-table label-danger">Suspended</span></td>
-											</tr>
-											<tr>
-												<td>Maxine</td>
-												<td><a href="#">Woldt</a></td>
-												<td><a href="#">Business Services Sales Representative</a></td>
-												<td>17 Oct 1987</td>
-												<td><span class="label label-table label-dark">Disabled</span></td>
-											</tr>
-											<tr>
-												<td>Lorraine</td>
-												<td>Mcgaughy</td>
-												<td>Hemodialysis Technician</td>
-												<td>11 Nov 1983</td>
-												<td><span class="label label-table label-dark">Disabled</span></td>
-											</tr>
-											<tr>
-												<td>Lizzee</td>
-												<td><a href="#">Goodlow</a></td>
-												<td>Technical Services Librarian</td>
-												<td>1 Nov 1961</td>
-												<td><span class="label label-table label-danger">Suspended</span></td>
-											</tr>
-											<tr>
-												<td>Judi</td>
-												<td>Badgett</td>
-												<td>Electrical Lineworker</td>
-												<td>23 Jun 1981</td>
-												<td><span class="label label-table label-success">Active</span></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!--===================================================-->
-								<!-- End Foo Table - Expand / Collapse All Rows -->
-  <div class="row">
-    <h2>Basic Information</h2>
-=======
 <form>
   <h3>Some basic info about you</h3>
-    <div class="row">
->>>>>>> a031c8d12ab7c840edca6c3b1547dc3b3446cb76
 
-      <div class="col-md-6">
-        <label for="InputEmail">How old are you?</label>
-        <input type="text" class="form-control" id="InputEmail" placeholder="0 - 999">
-      </div>
-
-      <div class="col-md-6">
-        <label for="InputPassword">Where do you live?</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Awesometown">
-      </div>
-
+  <div class="row">
+    <div class="col-md-6">
+      <label for="InputEmail">How old are you?</label>
+      <input type="text" class="form-control" id="InputEmail" ng-model="enrollmentForm.age" placeholder="Enter an age&hellip;">
     </div>
-    <br>
-  <button type="submit" class="btn btn-success">Submit</button>
+
+    <div class="col-md-6">
+      <label for="InputPassword">What zip code do you live in?</label>
+      <input type="text" class="form-control" id="exampleInput1" ng-model="enrollmentForm.zipcode" placeholder="Enter a zip code&hellip;">
+    </div>
+  </div>
+
+  <br>
+
+  <button type="submit" class="btn btn-success" ng-click="submit()">Submit</button>
 </form>

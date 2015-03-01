@@ -97,6 +97,11 @@ app.controller('MainController', [
     $scope.clearJumbotron = function () {
       $scope.jumbotron = undefined;
     };
+
+    $scope.enrollmentForm = {
+      age: undefined,
+      zipcode: undefined
+    };
   }
 ]);
 
