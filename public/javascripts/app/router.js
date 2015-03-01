@@ -49,6 +49,10 @@ app.config([
         templateUrl: '/templates/success.html',
         controller: 'SuccessController'
       })
+      .when('/connect', {
+        templateUrl: '/templates/connect.html',
+        controller: 'ConnectController'
+      })
       .otherwise({
         redirectTo: '/'
       });

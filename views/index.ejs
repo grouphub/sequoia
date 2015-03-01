@@ -56,6 +56,7 @@
     <script src="/javascripts/app/controllers/recommendations-controller.js"></script>
     <script src="/javascripts/app/controllers/details-controller.js"></script>
     <script src="/javascripts/app/controllers/success-controller.js"></script>
+    <script src="/javascripts/app/controllers/connect-controller.js"></script>
     <script src="/javascripts/app/router.js"></script>
   </head>
 
@@ -103,6 +104,10 @@
 
             <li ng-if="isSignedin()">
               <a href="" ng-click="signout()">Sign Out</a>
+            </li>
+
+            <li ng-if="isSignedin()">
+              <a href="/connect">Connect</a>
             </li>
 
             <li class="broker-button">
