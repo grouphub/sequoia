@@ -11,6 +11,25 @@ header.navbar {
 .jumbotron h1, .jumbotron h2 {
   text-shadow: 0 1px .5px #000;
 }
+.jumbotron h2 {
+	margin-bottom: 30px;
+}
+.sub-jumbotron {
+	margin: -45px -15px -15px -15px;
+	min-height: 240px;
+	background-color: #eee;
+}
+.sub-jumbotron h2 {
+	margin-top: 60px;
+	color: #000;
+	font-size: 27px;
+}
+.sub-jumbotron p {
+	color: #555;
+	font-size: 18px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
 
 main {
   margin-top: 20px;
@@ -53,4 +72,6 @@ img {
 .view-details {
   margin-top: 12px;
 }
+
+
 
