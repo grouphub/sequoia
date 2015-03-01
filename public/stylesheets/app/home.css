@@ -125,3 +125,16 @@ img {
   }
 }
 
+#team-section h1 {
+  margin-bottom: 20px;
+}
+
+#team-section i.fa, span.glyphicon {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+#team-section .col-md-4 {
+  margin-bottom: 40px;
+}
+
