@@ -23,11 +23,20 @@ main {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.doctors-profile {
+	min-height: 400px;
+	background-color: #ddd;
+	padding-top: 20px;
+	border: 1px solid #ddd;
+}
+dt {
+	margin-bottom: -5px;
+}
 .doctors-btn {
   float: right;
 }
 thead {
-  background-color: #057ff4;
+  background-color: #0071de;
   color: #bbdfff;
 }
 img {
@@ -37,7 +46,6 @@ img {
 .doctor-table .doctor {
   cursor: pointer;
 }
-.doctor-table .doctor.current {
-  cursor: pointer;
-  color: red;
+.doctor-table .doctor.current td{
+  background-color: #ddd;
 }
