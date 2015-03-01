@@ -1,163 +1,613 @@
+<div id="enrollment-form" class="col-md-12 ng-scope">
+  <form name="applicationForm" ng-submit="apply()">
+    <div class="row">
+      <h1>Benefits Enrollment Application</h1>
 
-<div class="col-sm-12">
-  <div class="row">
-    <h2>Details</h2>
-    	<div class="col-sm-6">
-			<div class="panel">
-				<div class="panel-heading">
-					<h3 class="panel-title">Insurance Plan Benefit Details</h3>
-				</div>
+      <div class="box box-warning" name="subscriber">
+        <div class="box-header">
+          <h3 class="box-title">Primary Applicant</h3>
+        </div>
 
-				<div class="col-lg-6">
-							<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">Hover rows</h3>
-								</div>
-					
-								<!--Hover Rows-->
-								<!--===================================================-->
-								<div class="panel-body">
-									<table class="table table-hover table-vcenter">
-										<thead>
-											<tr>
-												<th class="min-width">Device</th>
-												<th>Name</th>
-												<th class="text-center">Value</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="text-center"><img src="https://static.ehealthinsurance.com/ehealthinsurance/CarrierProfile/logos/9002.gif"</td>
-												<td>
-													<span class="text-semibold">Desktop</span>
-													<br>
-													<small class="text-muted">Last 7 days : 4,234k</small>
-												</td>
-												<td class="text-center"><span class="text-danger text-semibold">- 28.76%</span></td>
-											</tr>
-											<tr>
-												<td class="text-center"><span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-laptop fa-lg"></i></span></td>
-												<td>
-													<span class="text-semibold">Laptop</span>
-													<br>
-													<small class="text-muted">Last 7 days : 3,876k</small>
-												</td>
-												<td class="text-center"><span class="text-warning text-semibold">- 8.55%</span></td>
-											</tr>
-											<tr>
-												<td class="text-center"><span class="icon-wrap icon-wrap-sm icon-circle bg-danger"><i class="fa fa-tablet fa-lg"></i></span></td>
-												<td>
-													<span class="text-semibold">Tablet</span>
-													<br>
-													<small class="text-muted">Last 7 days : 45,678k</small>
-												</td>
-												<td class="text-center"><span class="text-success text-semibold">+ 58.56%</span></td>
-											</tr>
-											<tr>
-												<td class="text-center"><span class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="fa fa-mobile fa-lg"></i></span></td>
-												<td>
-													<span class="text-semibold">Smartphone</span>
-													<br>
-													<small class="text-muted">Last 7 days : 34,553k</small>
-												</td>
-												<td class="text-center"><span class="text-success text-semibold">+ 35.76%</span></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!--===================================================-->
-								<!--End Hover Rows-->
-					
-							</div>
-						</div>
-	
-				<!-- Foo Table - Expand / Collapse All Rows -->
-				<!--===================================================-->
-				<div class="panel-body">
-					<div class="pad-btm">
-						<button id="demo-foo-collapse" class="btn btn-info">Collapse All</button>
-						<button id="demo-foo-expand" class="btn btn-warning">Expand All</button>
-					</div>
-					<table id="demo-foo-col-exp" class="table toggle-circle">
-						<thead>
-							<tr>
-								<th data-toggle="true">Carrier/th>
-								<th>Plan</th>
-								<th data-hide="all">Plan Type</th>
-								<th data-hide="all">Monthly Premium</th>
-								<th data-hide="all">Deductable</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Isidra</td>
-								<td>Boudreaux</td>
-								<td>Traffic Court Referee</td>
-								<td>22 Jun 1972</td>
-								<td><span class="label label-table label-success">Active</span></td>
-							</tr>
-							<tr>
-								<td>Shona</td>
-								<td>Woldt</td>
-								<td>Airline Transport Pilot</td>
-								<td>3 Oct 1981</td>
-								<td><span class="label label-table label-dark">Disabled</span></td>
-							</tr>
-							<tr>
-								<td>Granville</td>
-								<td>Leonardo</td>
-								<td>Business Services Sales Representative</td>
-								<td>19 Apr 1969</td>
-								<td><span class="label label-table label-danger">Suspended</span></td>
-							</tr>
-							<tr>
-								<td>Easer</td>
-								<td>Dragoo</td>
-								<td>Drywall Stripper</td>
-								<td>13 Dec 1977</td>
-								<td><span class="label label-table label-success">Active</span></td>
-							</tr>
-							<tr>
-								<td>Maple</td>
-								<td>Halladay</td>
-								<td>Aviation Tactical Readiness Officer</td>
-								<td>30 Dec 1991</td>
-								<td><span class="label label-table label-danger">Suspended</span></td>
-							</tr>
-							<tr>
-								<td>Maxine</td>
-								<td><a href="#">Woldt</a></td>
-								<td><a href="#">Business Services Sales Representative</a></td>
-								<td>17 Oct 1987</td>
-								<td><span class="label label-table label-dark">Disabled</span></td>
-							</tr>
-							<tr>
-								<td>Lorraine</td>
-								<td>Mcgaughy</td>
-								<td>Hemodialysis Technician</td>
-								<td>11 Nov 1983</td>
-								<td><span class="label label-table label-dark">Disabled</span></td>
-							</tr>
-							<tr>
-								<td>Lizzee</td>
-								<td><a href="#">Goodlow</a></td>
-								<td>Technical Services Librarian</td>
-								<td>1 Nov 1961</td>
-								<td><span class="label label-table label-danger">Suspended</span></td>
-							</tr>
-							<tr>
-								<td>Judi</td>
-								<td>Badgett</td>
-								<td>Electrical Lineworker</td>
-								<td>23 Jun 1981</td>
-								<td><span class="label label-table label-success">Active</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<!--===================================================-->
-				<!-- End Foo Table - Expand / Collapse All Rows -->
-    <p>Lorem ipsum&hellip;</p>
-  </div>
+        <div class="box-body">
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">First Name</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="first_name" name="first_name" ng-model="first_name" required="" placeholder="First Name">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Middle Name</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="middle_name" name="middle_name" ng-model="middle_name" required="" placeholder="Middle Name">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Last Name</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="last_name" name="last_name" ng-model="last_name" required="" placeholder="Last Name">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Sex</label>
+            <fieldset>
+              <label class="radio-inline">
+                <input type="radio" name="sex_indicate" id="" value="Male">
+                Male
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="sex_indicate" id="" value="Female">
+                Female
+              </label>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Social Security number</label>
+            <input type="text" name="social_security_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Social Security number">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Date of birth (mm/dd/yy)</label>
+            <input type="text" name="date_of_birth" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Date of birth (mm/dd/yy)">
+          </div>
+        </div>
+      </div>
+      <div class="box box-warning" name="subscriberContact">
+        <div class="box-header">
+          <h3 class="box-title">Contact Information</h3>
+        </div>
+        <div class="box-body">
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Street address</label>
+            <input type="text" name="street_address" class="form-control ng-pristine ng-untouched ng-valid" id="street_address" ng-model="street_address" placeholder="Street address">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Apt. #</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" name="apartment_number" id="apartment_number" ng-model="apartment_number" placeholder="Apt. #">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">City</label>
+            <input type="text" name="city" class="form-control ng-pristine ng-untouched ng-valid" id="city" ng-model="city" placeholder="City">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">State</label>
+            <input type="text" name="state" class="form-control ng-pristine ng-untouched ng-valid" id="state" ng-model="state" placeholder="State">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">ZIP</label>
+            <input type="text" name="zip" class="form-control ng-pristine ng-untouched ng-valid" id="zip" ng-model="zip" placeholder="ZIP">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">County</label>
+            <input type="text" name="county" class="form-control ng-pristine ng-untouched ng-valid" id="county" ng-model="county" placeholder="County">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Phone</label>
+            <input type="tel" name="phone" class="form-control ng-pristine ng-untouched ng-valid" id="phone" ng-model="phone" placeholder="Phone">
+          </div>
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Other phone</label>
+            <input type="tel" name="other_phone" class="form-control ng-pristine ng-untouched ng-valid" id="other_phone" ng-model="other_phone" placeholder="Other phone">
+          </div>
+        </div>
+      </div>
+      <div class="box box-warning">
+        <div class="box-header">
+          <h3 class="box-title">Previous Coverage</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <!-- text input -->
+          <div class="form-group" show-errors="{showSuccess: true}">
+            <label class="control-label">Medical record # (if any)</label>
+            <input type="text" name="medical_record_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Medical record # (if any)">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Have you previously had insurance coverage?</label>
+            <fieldset>
+              <label class="radio-inline">
+                <input type="radio" name="coverage_experience" id="" value="Yes">
+                Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="coverage_experience" id="" value="No">
+                No
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">If Yes, most recent insurance carrier:</label>
+            <input type="text" name="if_yes_most_recent_insurance_carrier" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="If Yes, most recent insurance carrier:">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Dates of coverage:</label>
+            <input type="text" name="dates_of_coverage" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Dates of coverage:">
+          </div>
+        </div>
+
+      </div><!-- /.box-body -->
+      <div class="box box-warning">
+
+        <div class="box box-warning">
+          <div class="box-header">
+            <h3 class="box-title">
+              Family Member(s) to be Covered<br>
+              <small>All members must reside in our Califonria service area.</small>
+            </h3>
+          </div><!-- /.box-header -->
+          <div class="box-header">
+            <h4 class="text-center">Dependent 1</h4>
+          </div>
+          <div class="box-body">
+            <!-- text input -->
+            <div class="row">
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">First name</label>
+                <input type="text" name="dependent_1_first_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="First name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Middle name</label>
+                <input type="text" name="dependent_1_middle_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Middle name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Last name</label>
+                <input type="text" name="dependent_1_last_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Last name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Medical record # (if any)</label>
+                <input type="text" name="dependent_1_medical_record_number_if_any" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Medical record # (if any)">
+              </div>
+
+              <div class="form-group col-sm-5">
+                <label class="control-label">Social Security number</label>
+                <input type="text" name="dependent_1_social_security_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Social Security number">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Date of birth (mm/dd/yy)</label>
+                <input type="text" name="dependent_1_date_of_birth" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Date of birth (mm/dd/yy)">
+              </div>
+
+              <div class="form-group" show-errors="{showSuccess: true}">
+                <label class="control-label">Sex</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_1_sex_indicate" id="" value="Male">
+                    Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_1_sex_indicate" id="" value="Female">
+                    Female
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-3">
+                <label class="control-label">Has this dependent previously had insurance coverage?</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_1_coverage_experience" id="" value="Yes">
+                    Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_1_coverage_experience" id="" value="No">
+                    No
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-5">
+                <label class="control-label">If Yes, most recent insurance carrier:</label>
+                <input type="text" name="dependent_1_if_yes_most_recent_insurance_carrier" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="If Yes, most recent insurance carrier:">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Dates of coverage:</label>
+                <input type="text" name="dependent_1_dates_of_coverage" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Dates of coverage:">
+              </div>
+            </div>
+
+          </div><!-- /.box-body -->
+          <div class="box-header">
+            <h4 class="text-center">Dependent 2</h4>
+          </div>
+          <div class="box-body">
+            <!-- text input -->
+            <div class="row">
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">First name</label>
+                <input type="text" name="dependent_2_first_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="First name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Middle name</label>
+                <input type="text" name="dependent_2_middle_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Middle name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Last name</label>
+                <input type="text" name="dependent_2_last_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Last name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Medical record # (if any)</label>
+                <input type="text" name="dependent_2_medical_record_number_if_any" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Medical record # (if any)">
+              </div>
+
+              <div class="form-group col-sm-5">
+                <label class="control-label">Social Security number</label>
+                <input type="text" name="dependent_2_social_security_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Social Security number">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Date of birth (mm/dd/yy)</label>
+                <input type="text" name="dependent_2_date_of_birth" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Date of birth (mm/dd/yy)">
+              </div>
+
+              <div class="form-group" show-errors="{showSuccess: true}">
+                <label class="control-label">Sex</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_2_sex_indicate" id="" value="Male">
+                    Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_2_sex_indicate" id="" value="Female">
+                    Female
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-3">
+                <label class="control-label">Has this dependent previously had insurance coverage?</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_2_coverage_experience" id="" value="Yes">
+                    Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_2_coverage_experience" id="" value="No">
+                    No
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-5">
+                <label class="control-label">If Yes, most recent insurance carrier:</label>
+                <input type="text" name="dependent_2_if_yes_most_recent_insurance_carrier" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="If Yes, most recent insurance carrier:">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Dates of coverage:</label>
+                <input type="text" name="dependent_2_dates_of_coverage" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Dates of coverage:">
+              </div>
+            </div>
+
+          </div><!-- /.box-body -->
+          <div class="box-header">
+            <h4 class="text-center">Dependent 3</h4>
+          </div>
+          <div class="box-body">
+            <!-- text input -->
+            <div class="row">
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">First name</label>
+                <input type="text" name="dependent_3_first_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="First name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Middle name</label>
+                <input type="text" name="dependent_3_middle_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Middle name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Last name</label>
+                <input type="text" name="dependent_3_last_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Last name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Medical record # (if any)</label>
+                <input type="text" name="dependent_3_medical_record_number_if_any" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Medical record # (if any)">
+              </div>
+
+              <div class="form-group col-sm-5">
+                <label class="control-label">Social Security number</label>
+                <input type="text" name="dependent_3_social_security_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Social Security number">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Date of birth (mm/dd/yy)</label>
+                <input type="text" name="dependent_3_date_of_birth" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Date of birth (mm/dd/yy)">
+              </div>
+
+              <div class="form-group" show-errors="{showSuccess: true}">
+                <label class="control-label">Sex</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_3_sex_indicate" id="" value="Male">
+                    Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_3_sex_indicate" id="" value="Female">
+                    Female
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-3">
+                <label class="control-label">Has this dependent previously had insurance coverage?</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_3_coverage_experience" id="" value="Yes">
+                    Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_3_coverage_experience" id="" value="No">
+                    No
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-5">
+                <label class="control-label">If Yes, most recent insurance carrier:</label>
+                <input type="text" name="dependent_3_if_yes_most_recent_insurance_carrier" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="If Yes, most recent insurance carrier:">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Dates of coverage:</label>
+                <input type="text" name="dependent_3_dates_of_coverage" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Dates of coverage:">
+              </div>
+            </div>
+
+          </div><!-- /.box-body -->
+          <div class="box-header">
+            <h4 class="text-center">Dependent 4</h4>
+          </div>
+          <div class="box-body">
+            <!-- text input -->
+            <div class="row">
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">First name</label>
+                <input type="text" name="dependent_4_first_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="First name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Middle name</label>
+                <input type="text" name="dependent_4_middle_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Middle name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Last name</label>
+                <input type="text" name="dependent_4_last_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Last name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Medical record # (if any)</label>
+                <input type="text" name="dependent_4_medical_record_number_if_any" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Medical record # (if any)">
+              </div>
+
+              <div class="form-group col-sm-5">
+                <label class="control-label">Social Security number</label>
+                <input type="text" name="dependent_4_social_security_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Social Security number">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Date of birth (mm/dd/yy)</label>
+                <input type="text" name="dependent_4_date_of_birth" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Date of birth (mm/dd/yy)">
+              </div>
+
+              <div class="form-group" show-errors="{showSuccess: true}">
+                <label class="control-label">Sex</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_4_sex_indicate" id="" value="Male">
+                    Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_4_sex_indicate" id="" value="Female">
+                    Female
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-3">
+                <label class="control-label">Has this dependent previously had insurance coverage?</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_4_coverage_experience" id="" value="Yes">
+                    Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="dependent_4_coverage_experience" id="" value="No">
+                    No
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-4 col-md-5">
+                <label class="control-label">If Yes, most recent insurance carrier:</label>
+                <input type="text" name="dependent_4_if_yes_most_recent_insurance_carrier" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="If Yes, most recent insurance carrier:">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Dates of coverage:</label>
+                <input type="text" name="dependent_4_dates_of_coverage" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Dates of coverage:">
+              </div>
+            </div>
+
+          </div><!-- /.box-body -->
+        </div><!-- /.box -->
+
+        <div class="box box-warning">
+          <div class="box-header">
+            <h3 class="box-title">Parent or Legal Guardian</h3>
+          </div><!-- /.box-header -->
+          <div class="box-body">
+            <!-- text input -->
+            <div class="row">
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">First name</label>
+                <input type="text" name="parent_or_legal_guardian_first_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="First name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Middle name</label>
+                <input type="text" name="parent_or_legal_guardian_middle_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Middle name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Last name</label>
+                <input type="text" name="parent_or_legal_guardian_last_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Last name">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Parent/Legal Guardian Social Security number</label>
+                <input type="text" name="parent_or_legal_guardian_social_security_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Parent/Legal Guardian Social Security number">
+              </div>
+
+              <div class="form-group col-sm-8">
+                <label class="control-label">Relationship to applicant</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_rel_to_applicant" value="Parent/Guardian">
+                    Parent/Guardian
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_rel_to_applicant" value="Spouse">
+                    Spouse
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_rel_to_applicant" value="Domestic partner">
+                    Domestic partner
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_rel_to_applicant" value="Other">
+                    Other
+                  </label>
+                </fieldset>
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Same address as primary applicant?</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_same_address" value="Yes">
+                    Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_same_address" value="No">
+                    No
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Street address</label>
+                <input type="text" name="parent_or_legal_guardian_street_address" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Street address">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Apt. #</label>
+                <input type="text" name="parent_or_legal_guardian_apartment_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Apt. #">
+              </div>
+              <div class="form-group col-sm-5">
+                <label class="control-label">City</label>
+                <input type="text" name="parent_or_legal_guardian_city" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="City">
+              </div>
+              <div class="form-group col-sm-2">
+                <label class="control-label">State</label>
+                <input type="text" name="parent_or_legal_guardian_state" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="State">
+              </div>
+              <div class="form-group col-sm-2">
+                <label class="control-label">ZIP</label>
+                <input type="text" name="parent_or_legal_guardian_zip" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="ZIP">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">County</label>
+                <input type="text" name="parent_or_legal_guardian_county" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="County">
+              </div>
+              <div class="form-group col-sm-6">
+                <label class="control-label">Phone</label>
+                <input type="tel" name="parent_or_legal_guardian_phone" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Phone">
+              </div>
+              <div class="form-group col-sm-6">
+                <label class="control-label">Other phone</label>
+                <input type="tel" name="parent_or_legal_guardian_other_phone" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Other phone">
+              </div>
+              <div class="form-group col-sm-8">
+                <label class="control-label">Parent/Legal guardian date of birth (mm/dd/yy)</label>
+                <input type="text" name="parent_or_legal_guardian_date_of_birth" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Parent/Legal guardian date of birth (mm/dd/yy)">
+              </div>
+
+              <div class="form-group col-sm-4">
+                <label class="control-label">Parent/Legal guardian Sex</label>
+                <fieldset>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_sex_indicate" id="" value="Male">
+                    Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="parent_or_legal_guardian_sex_indicate" id="" value="Female">
+                    Female
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="form-group col-sm-6">
+                <label class="control-label">Preferred language spoken (if not English)</label>
+                <input type="text" class="form-control ng-pristine ng-untouched ng-valid" name="parent_or_legal_guardian_language_spoken" id="apartment_number" ng-model="last_name" placeholder="Preferred language spoken (if not English)">
+              </div>
+              <div class="form-group col-sm-6">
+                <label class="control-label">Preferred language read (if not English)</label>
+                <input type="text" class="form-control ng-pristine ng-untouched ng-valid" name="parent_or_legal_guardian_language_read" id="apartment_number" ng-model="last_name" placeholder="Preferred language read (if not English)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box box-warning">
+          <div class="box-header">
+            <h3 class="box-title">You can choose an authorized representative</h3>
+          </div><!-- /.box-header -->
+          <div class="box-body">
+            <!-- text input -->
+            <div class="row">
+
+              <div class="form-group col-sm-4">
+                <label class="control-label">First name of authorized representative</label>
+                <input type="text" name="authorized_representative_first_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="First name of authorized representative">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Middle name</label>
+                <input type="text" name="authorized_representative_middle_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Middle name">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Last name</label>
+                <input type="text" name="authorized_representative_last_name" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Last name">
+              </div>
+
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Street address</label>
+                <input type="text" name="authorized_representative_street_address" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Street address">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">Apt. #</label>
+                <input type="text" name="authorized_representative_apartment_number" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Apt. #">
+              </div>
+              <div class="form-group col-sm-6">
+                <label class="control-label">City</label>
+                <input type="text" name="authorized_representative_city" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="City">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">State</label>
+                <input type="text" name="authorized_representative_street" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="State">
+              </div>
+              <div class="form-group col-sm-12" show-errors="{showSuccess: true}">
+                <label class="control-label">ZIP</label>
+                <input type="text" name="authorized_representative_zip" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="ZIP">
+              </div>
+
+              <div class="form-group col-sm-6">
+                <label class="control-label">Phone</label>
+                <input type="tel" name="authorized_representative_phone" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Phone">
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="form-group col-sm-12">
+                <p>By signing, you allow this person to sign your application, to get official information about this application, and to act for you on matters related to this application.</p>
+              </div>
+              <div class="form-group col-sm-8">
+                <label class="control-label">Primary applicant or parent or legal guardian for applicants under age 18</label>
+                <input type="text" name="authorized_representative_primary_applicant" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Primary applicant or parent or legal guardian for applicants under age 18">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="control-label">Date (mm/dd/yyyy)</label>
+                <input type="text" name="authorized_representative_date" class="form-control ng-pristine ng-untouched ng-valid" id="apartment_number" ng-model="last_name" placeholder="Date (mm/dd/yyyy)">
+              </div>
+            </div>
+
+          </div><!-- /.box-body -->
+        </div><!-- /.box -->
+      </div>
+
+      <input type="submit" class="btn btn-primary" ng-click="submit()" value="apply">
+    </div>
+  </form>
 </div>
-
