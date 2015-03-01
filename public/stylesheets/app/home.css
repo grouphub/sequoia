@@ -20,3 +20,17 @@ main {
 .main p {
   font-size: 16px;
 }
+.doctors-row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.doctors-btn {
+	float: right;
+}
+thead {
+	background-color: #057ff4;
+	color: #bbdfff;
+}
+img {
+	margin-bottom: 5px;
+}
