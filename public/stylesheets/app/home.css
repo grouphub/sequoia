@@ -43,13 +43,13 @@ main {
   margin-bottom: 20px;
 }
 .doctors-profile {
-	min-height: 400px;
-	background-color: #ddd;
-	padding-top: 20px;
-	border: 1px solid #ddd;
+  min-height: 400px;
+  background-color: #ddd;
+  padding-top: 20px;
+  border: 1px solid #ddd;
 }
 dt {
-	margin-bottom: -5px;
+  margin-bottom: -5px;
 }
 .doctors-btn {
   float: right;
@@ -73,5 +73,8 @@ img {
   margin-top: 12px;
 }
 
+.doctors-row > .col-md-9 {
+  padding-right: 0;
+}
 
 
