@@ -9,6 +9,10 @@ app.config([
         templateUrl: '/templates/home.html',
         controller: 'HomeController'
       })
+      .when('/dashboard', {
+        templateUrl: '/templates/dashboard.html',
+        controller: 'DashboardController'
+      })
       .when('/users/signin', {
         templateUrl: '/templates/users/signin.html',
         controller: 'UsersSigninController'
