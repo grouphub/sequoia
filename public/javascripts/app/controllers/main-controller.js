@@ -117,13 +117,48 @@ app.controller('MainController', [
     // ================
 
     $scope.callBroker = function() {
+
       sinchClient = new SinchClient({
           applicationKey: '3b82c382-1a34-41cb-bf38-42eba9d8d7e4',
+          applicationSecret: 's9wKLFx5UUWQ0Py+Vgj5Cg==',
           capabilities: {calling: true},
       });
 
+      function showCall() {
+        console.log('showing call', sinchClient. arguments)
+      }
+
+      function handleError() {
+        console.log('error call', sinchClient, arguments)
+      }
+
+      function callListener() {
+        console.log('error call', sinchClient, arguments)
+      }
+
+      var username = 'foo1234'
+      var password = 'foo1234'
+      var callUsername = ''
+
+       var loginObject = {username: username, password: password};
+        sinchClient.newUser(loginObject, function(ticket) {
+          sinchClient.start(ticket, function() {
+            global_username = username;
+            showCall();
+          }).fail(handleError);
+        }).fail(handleError);
+
+        var callClient = sinchClient.getCallClient();
+
+        call = callClient.callPhoneNumber($('+14159882111').val());
+
+        call.addEventListener(callListener);
+
       var callClient = sinchClient.getCallClient();
       var call;
+
+      call = callClient.callUser(callUsername);
+      call.addEventListener(callListener);
     }
   }
 ]);
