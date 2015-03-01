@@ -4,8 +4,9 @@ app.controller('RecommendationsController', [
   '$scope',
   '$cookieStore',
   '$http',
+  '$location',
   'flashesFactory',
-  function ($scope, $cookieStore, $http, flashesFactory) {
+  function ($scope, $cookieStore, $http, $location, flashesFactory) {
     var age = $cookieStore.get('age');
     var zipcode = $cookieStore.get('zipcode');
 
@@ -42,6 +43,12 @@ app.controller('RecommendationsController', [
       var tradingPartner = $scope.tradingPartner(plan) || {};
 
       return tradingPartner.name;
+    }
+
+    $scope.pickPlan = function (plan) {
+      $cookieStore.put('plan', JSON.stringify(plan));
+
+      $location.path('/details')
     }
 
     if (!$scope.plans) {
