@@ -9,8 +9,7 @@
     <img class="profile-image img-rounded" ng-if="currentDoctor.profile.image_url" ng-src="{{currentDoctor.profile.image_url}}">
 
     <dl ng-if="currentDoctor">
-      <dt>Name</dt>
-      <dd>{{name(currentDoctor)}}</dd>
+      <dd class="doctor-name">{{name(currentDoctor)}}</dd>
 
       <dt ng-if="rate(currentDoctor)">Rating</dt>
       <dd ng-if="rate(currentDoctor)" ng-bind-html="rate(currentDoctor)"></dd>

@@ -36,18 +36,24 @@ main {
 }
 
 .main p {
-  font-size: 16px;
+  font-size: 18px;
 }
 .doctors-row {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .doctors-profile {
-  min-height: 400px;
-  background-color: #ddd;
+  min-height: 377px;
+  background-color: #f0eded;
   padding-top: 20px;
   border: 1px solid #ddd;
 }
+
+.doctor-name {
+	font-size: 17.5px;
+	font-weight: bold;
+}
+
 dt {
   margin-bottom: -5px;
 }
@@ -66,7 +72,7 @@ img {
   cursor: pointer;
 }
 .doctor-table .doctor.current td{
-  background-color: #ddd;
+  background-color: #f0eded;
 }
 
 .view-details {
@@ -79,6 +85,10 @@ img {
 
 .doctors-row .more {
   text-align: center;
+}
+
+.success-tron {
+	background-color: #5cb85c;
 }
 
 
