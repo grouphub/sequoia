@@ -4,7 +4,8 @@ app.controller('SignupController', [
   '$scope',
   '$cookieStore',
   function ($scope, $cookieStore) {
-    console.log('yes');
+    $scope.setJumbotron('signup');
+
     $scope.ready();
   }
 ]);

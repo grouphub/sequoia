@@ -4,6 +4,8 @@ app.controller('DoctorsController', [
   '$scope',
   '$cookieStore',
   function ($scope, $cookieStore) {
+    $scope.clearJumbotron();
+
     $scope.ready();
   }
 ]);

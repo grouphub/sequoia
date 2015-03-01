@@ -89,6 +89,14 @@ app.controller('MainController', [
           flashesFactory.add('danger', message);
         });
     };
+
+    $scope.setJumbotron = function (name) {
+      $scope.jumbotron = name;
+    };
+
+    $scope.clearJumbotron = function () {
+      $scope.jumbotron = undefined;
+    };
   }
 ]);
 

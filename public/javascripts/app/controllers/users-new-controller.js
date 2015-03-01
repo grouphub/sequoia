@@ -9,7 +9,6 @@ app.controller('UsersNewController', [
     $scope.form = {
       email: undefined,
       password: undefined,
-      password_confirm: undefined
     };
 
     $scope.submit = function () {
@@ -30,6 +29,8 @@ app.controller('UsersNewController', [
           flashesFactory.add('danger', message);
         });
     };
+
+    $scope.clearJumbotron();
 
     $scope.ready();
   }
