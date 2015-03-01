@@ -7,22 +7,8 @@ app.controller('DoctorsController', [
   '$cookieStore',
   'flashesFactory',
   function ($scope, $http, $location, $cookieStore, flashesFactory) {
-    var age = $cookieStore.get('age');
-    var zipcode = $cookieStore.get('zipcode');
-
-    if (!picker.user) {
-      // ...
-    }
-
-    if (_(age).isEmpty()) {
-      flashesFactory.add('danger', 'Age must be provided.');
-      return;
-    }
-
-    if (_(zipcode).isEmpty()) {
-      flashesFactory.add('danger', 'Zip code must be provided.');
-      return;
-    }
+    var age;
+    var zipcode;
 
     $scope.name = function (doctor) {
       var middleName = (doctor.profile.middle_name && doctor.profile.middle_name.length === 1) ?
@@ -116,6 +102,23 @@ app.controller('DoctorsController', [
         $scope.currentDoctor = doctor;
       }
     };
+
+    age = $cookieStore.get('age');
+    zipcode = $cookieStore.get('zipcode');
+
+    if (!picker.user) {
+      // ...
+    }
+
+    if (_(age).isEmpty()) {
+      flashesFactory.add('danger', 'Age must be provided.');
+      return;
+    }
+
+    if (_(zipcode).isEmpty()) {
+      flashesFactory.add('danger', 'Zip code must be provided.');
+      return;
+    }
 
     $http
       .get('/api/v1/plans.json?zipcode=' + zipcode + '&age=' + age)

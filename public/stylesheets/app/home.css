@@ -49,3 +49,8 @@ img {
 .doctor-table .doctor.current td{
   background-color: #ddd;
 }
+
+.view-details {
+  margin-top: 12px;
+}
+
