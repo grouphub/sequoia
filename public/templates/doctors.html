@@ -42,7 +42,7 @@
       </thead>
 
       <tbody>
-        <tr class="doctor" ng-repeat="doctor in plans.doctors" ng-click="doctorClicked(doctor)" ng-mouseover="doctorHovered(doctor)">
+        <tr class="doctor" ng-repeat="doctor in plans.doctors" ng-class="{current: doctor === currentDoctor}" ng-click="doctorClicked(doctor)" ng-mouseover="doctorHovered(doctor)">
           <td>{{name(doctor)}}</td>
           <td ng-bind-html="rate(doctor)"></td>
         </tr>

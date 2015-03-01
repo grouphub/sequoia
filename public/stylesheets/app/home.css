@@ -37,3 +37,7 @@ img {
 .doctor-table .doctor {
   cursor: pointer;
 }
+.doctor-table .doctor.current {
+  cursor: pointer;
+  color: red;
+}
