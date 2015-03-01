@@ -45,7 +45,7 @@ main {
 .doctors-profile {
   min-height: 377px;
   background-color: #f0eded;
-  padding-top: 20px;
+  padding-top: 10px;
   border: 1px solid #ddd;
 }
 
@@ -94,6 +94,11 @@ img {
 
 .success-tron h2 {
 	color: #fff;
+}
+
+.line-height-smaller {
+	padding-top: 2px;
+	line-height: 1.09;
 }
 
 
