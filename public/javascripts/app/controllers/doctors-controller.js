@@ -113,7 +113,6 @@ app.controller('DoctorsController', [
       }
     };
 
-    $scope.searchDoctors = undefined;
     $scope.form = {
       query: undefined
     };
@@ -144,6 +143,18 @@ app.controller('DoctorsController', [
 
       $scope.offset += 10;
       $scope.topDoctors = $scope.plans.doctors.slice($scope.offset, $scope.offset + 10);
+    };
+
+    $scope.submit = function () {
+      $cookieStore.put('doctor', JSON.stringify($scope.currentDoctor));
+
+      $location.path('/recommendations')
+    };
+
+    $scope.skip = function () {
+      $cookieStore.put('doctor', undefined);
+
+      $location.path('/recommendations')
     };
 
     age = $cookieStore.get('age');
