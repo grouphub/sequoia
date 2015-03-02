@@ -140,6 +140,7 @@ app.controller('MainController', [
         username: username,
         password: password
       };
+      
       var sinchClient = new SinchClient({
           applicationKey: '3b82c382-1a34-41cb-bf38-42eba9d8d7e4',
           applicationSecret: 's9wKLFx5UUWQ0Py+Vgj5Cg==',
@@ -166,11 +167,11 @@ app.controller('MainController', [
     };
 
     $scope.callBroker = function () {
-      $scope.call('+14155191862');
+      $scope.call('+14159882111');
     };
 
     $scope.callDoctor = function (doctor) {
-      $scope.call('+14155191862');
+      $scope.call('+14159882111');
     };
   }
 ]);
