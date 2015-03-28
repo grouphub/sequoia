@@ -53,6 +53,10 @@ app.config([
         templateUrl: '/templates/connect.html',
         controller: 'ConnectController'
       })
+      .when('/onboarding', {
+        templateUrl: '/templates/onboarding.html',
+        controller: 'OnboardingController'
+      })
       .otherwise({
         redirectTo: '/'
       });
