@@ -9,6 +9,8 @@
 	justify-content: space-around;
 }
 .option-select {
+	background-color: #d2d6de;
+	border-color: #d2d6de;
 	padding: 5px;
 	width: 15%;
 	height: 150px;
@@ -19,22 +21,69 @@
 	text-align: center;
 	white-space: normal;
 }
-.option-select.active {
-	background-color: green;
+.option-select:active, .option-select:hover, .option-select:focus {
+	background-color: #d2d6de;
+	border-color: #d2d6de;
 }
-
+.option-select.active {
+	background-color: #00a65a;
+}
 .plans {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	margin-top: 20px;
 }
 .plans .plan {
 	flex-grow: 1;
+	margin-left: 2px;
+	margin-right: 2px;
 	text-align: center;
 }
+.col-header {
+	background-color: lightGray;
+}
+.recommend {
+	background-color: #00c0ef;
+	color: white;
+	display: block;
+	visibility: hidden;
+	width: 100%;
+}
+.plan-select {
+	color: black;
+	text-decoration: none;
+	border: 1px solid lightGray;
+	padding: 3px 8px;
+	width: 60px;
+	display: block;
+	margin-right: auto;
+	border-radius: 8px;
+	margin-left: auto;
+	margin-top: 15px;
+}
+.plan-select:hover {
+	color: darkGray;
+	text-decoration: none;
+}
 
+
+
+.highlight .recommend {
+	visibility: visible;
+}
+.highlight .col-header {
+	background-color: #00c0ef;
+	color: white;
+}
+.highlight .plan-select {
+	background-color: #f39c12;
+}
+.highlight .plan-select:hover {
+	color: #ffffff;
+}
 @media screen and (max-width: 1201px) {
 	.option-select {
 		width: 31%;
