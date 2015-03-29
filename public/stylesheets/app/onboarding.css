@@ -1,5 +1,8 @@
-input[type="checkbox"], input[type="radio"] {
+.condition-select input[type="checkbox"] {
 	display: none;
+}
+.panel-heading {
+	cursor: pointer;
 }
 .options {
 	display: -webkit-box;
@@ -24,6 +27,9 @@ input[type="checkbox"], input[type="radio"] {
 	font-size: 2em;
 	text-align: center;
 	white-space: normal;
+}
+.records-select .option-select {
+	width: 31%;
 }
 .option-select:active, .option-select:hover, .option-select:focus {
 	background-color: #d2d6de;
@@ -76,7 +82,12 @@ input[type="checkbox"], input[type="radio"] {
 	color: darkGray;
 	text-decoration: none;
 }
-
+.record-plans {
+	display: none;
+}
+.record-plans.active {
+	display: block;
+}
 
 
 .highlight .recommend {
