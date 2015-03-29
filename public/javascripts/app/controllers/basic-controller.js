@@ -35,7 +35,7 @@ app.controller('BasicController', [
       $cookieStore.put('age', $scope.form.age);
       $cookieStore.put('zipcode', $scope.form.zipcode);
 
-      $location.path('/doctors')
+      $location.path('/dashboard')
     };
 
     $scope.clearJumbotron();
