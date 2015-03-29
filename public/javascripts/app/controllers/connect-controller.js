@@ -5,11 +5,9 @@ app.controller('ConnectController', [
   '$http',
   '$location',
   '$cookieStore',
+  '$timeout',
   'flashesFactory',
-  function ($scope, $http, $location, $cookieStore, flashesFactory) {
-
-    
-
+  function ($scope, $http, $location, $cookieStore, $timeout, flashesFactory) {
     $scope.ready();
 
     $scope.clearJumbotron();
@@ -31,7 +29,10 @@ app.controller('ConnectController', [
     // Create a new line chart object where as first parameter we pass in a selector
     // that is resolving to our chart container element. The Second parameter
     // is the actual data object.
-    new Chartist.Line('.ct-chart', data, options);
+
+    $timeout(function () {
+      new Chartist.Line('.ct-chart', data, options);
+    }, 100);
   }
 ]);
 
