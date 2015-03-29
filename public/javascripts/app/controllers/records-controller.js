@@ -6,10 +6,7 @@ app.controller('RecordsController', [
   '$location',
   'flashesFactory',
   function ($scope, $http, $location, flashesFactory) {
-
     $scope.clearJumbotron();
-
-    $scope.ready();
 
     $('.option-select').on('click', function() {
       if ( $(this).children().children().is('#dr') ) {
@@ -26,5 +23,23 @@ app.controller('RecordsController', [
         $('#immunizations').addClass('active');
       }
     });
+
+    $scope.patientId = '32';
+    $scope.patient = null;
+
+    $http
+      .get('/api/v1/patients/' + $scope.patientId + '.json')
+      .then(function (response) {
+        $scope.patient = response.data;
+
+        $scope.ready();
+      })
+      .catch(function (response) {
+        var message = (response.data && response.data.error) ?
+          response.data.error :
+          'An error occurred.';
+
+        flashesFactory.add('danger', message);
+      });
   }
 ]);
