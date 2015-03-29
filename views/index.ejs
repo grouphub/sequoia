@@ -110,7 +110,7 @@
             <!-- User is signed in -->
 
             <li ng-if="isSignedin()">
-              <a href="/basic">Get Started</a>
+              <a href="/dashboard">Dashboard</a>
             </li>
 
             <li ng-if="isSignedin()">
@@ -126,7 +126,7 @@
             </li>
 
             <li class="broker-button">
-              <a href="" ng-click="callBroker()">Contact an Agent</a>
+              <a href="" ng-click="callBroker()">Contact a Doctor</a>
 
             </li>
           </ul>
@@ -167,8 +167,8 @@
         <h2>Use our plan picker to find the best plan for you!</h2>
       </div>
 
-      <a class="btn btn-success btn-lg" href="/onboarding" role="button" ng-if="isSignedin()">Get Started Now</a>
-      <a class="btn btn-success btn-lg" href="/onboarding" role="button" ng-if="!isSignedin()">Get Started Now</a>
+      <a class="btn btn-success btn-lg" href="/onboarding" role="button" ng-if="isSignedin()">Get a Plan Now</a>
+      <a class="btn btn-success btn-lg" href="/onboarding" role="button" ng-if="!isSignedin()">Get a Plan Now</a>
     </div>
 
     <main ng-class="{loading: isLoading}">
