@@ -28,6 +28,9 @@
 	text-align: center;
 	white-space: normal;
 }
+.records-select .option-select {
+	width: 31%;
+}
 .option-select:active, .option-select:hover, .option-select:focus {
 	background-color: #d2d6de;
 	border-color: #d2d6de;
@@ -79,7 +82,12 @@
 	color: darkGray;
 	text-decoration: none;
 }
-
+.record-plans {
+	display: none;
+}
+.record-plans.active {
+	display: block;
+}
 
 
 .highlight .recommend {
