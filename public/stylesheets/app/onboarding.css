@@ -1,6 +1,9 @@
 .condition-select input[type="checkbox"] {
 	display: none;
 }
+.records-select input[type="radio"] {
+	display: none;
+}
 .panel-heading {
 	cursor: pointer;
 }
