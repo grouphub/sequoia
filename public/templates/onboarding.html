@@ -25,13 +25,14 @@
 	<div class="plan highlight" id="planA">
 		<span class="recommend">We Recommend</span>
 		<div class="col-header">Plan A</div>
-		<a class="plan-select" href="">Choose</a>
+		 <div class="h4 no-m-bottom"><a href="/details" class="btn btn-success">Select</a></div>
+	
 		<div class="panel panel-group">
 	 <div class="panel panel-default">
-	    <div class="panel-heading chevron-toggle collapsed" data-toggle="collapse" data-target="#collapseOverviewList">
+	    <div class="panel-heading chevron-toggle" data-toggle="collapse" data-target="#collapseOverviewList">
 	      <h3 class="panel-title">Plan Overview</h3>
 	    </div>
-	    <ul id="collapseOverviewList" class="list-group collapse" style="height: 0px;">
+	    <ul id="collapseOverviewList" class="list-group collapse in">
 
 	    	<li class="list-group-item">
 	           <div class="row">
@@ -80,7 +81,7 @@
 	    </ul>
     </div>
     <div class="panel panel-default">
-	    <div class="panel-heading chevron-toggle collapsed" data-toggle="collapse" data-target="#collapseVisitsList">
+	    <div class="panel-heading chevron-toggle collapsed" data-toggle="collapse" aria-expanded="true" data-target="#collapseVisitsList">
 	      <h3 class="panel-title">Doctor Visits</h3>
 	    </div>
 	    <ul id="collapseVisitsList" class="list-group collapse" style="height: 0px;">
@@ -271,62 +272,63 @@
 	<div class="plan" id="planB">
 		<span class="recommend">We Recommend</span>
 		<div class="col-header">Plan B</div>
-		<a class="plan-select" href="">Choose</a>
+		<div class="h4 no-m-bottom"><a href="/details" class="btn btn-success">Select</a></div>
 
 
 		<div class="panel panel-group">
+
 			 <div class="panel panel-default">
-			    <div class="panel-heading chevron-toggle collapsed" data-toggle="collapse" data-target="#collapseOverviewList2">
-			      <h3 class="panel-title">Plan Overview</h3>
-			    </div>
-			    <ul id="collapseOverviewList2" class="list-group collapse" style="height: 0px;">
+	    <div class="panel-heading chevron-toggle" data-toggle="collapse" data-target="#collapseOverviewList">
+	      <h3 class="panel-title">Plan Overview</h3>
+	    </div>
+	    <ul id="collapseOverviewList" class="list-group collapse in">
 
-			    	<li class="list-group-item">
-			           <div class="row">
-			               <div class="col-xs-4 col-xs-height col-full-height">PPO Plan</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">In Network</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">Out of Network</div>
-			           </div>
-			       </li>
-			       <li class="list-group-item">
-			           <div class="row">
-			               <div class="col-xs-4 col-xs-height col-full-height">Deductible</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$5,000</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$6,000</div>
-			           </div>
-			       </li>
-			       
-			       <li class="list-group-item">
-			           <div class="row">
-			               <div class="col-xs-4 col-xs-height col-full-height">Maximum Out-of-Pocket</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$6,500</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$8,000</div>
-			           </div>
-			       </li>
-			       <li class="list-group-item">
-			           <div class="row">
-			               <div class="col-xs-4 col-xs-height col-full-height">Coinsurance</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">20%</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">50%</div>
-			           </div>
-			       </li>
+	    	<li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">PPO Plan</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">In Network</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">Out of Network</div>
+	           </div>
+	       </li>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Deductible</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$5,000</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$6,000</div>
+	           </div>
+	       </li>
+	       
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Maximum Out-of-Pocket</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$6,500</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$8,000</div>
+	           </div>
+	       </li>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Coinsurance</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">20%</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">50%</div>
+	           </div>
+	       </li>
 
-			       <li class="list-group-item">
-			           <div class="row">
-			               <div class="col-xs-4 col-xs-height col-full-height">Doctor Visits</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$45-$150</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">50%</div>
-			           </div>
-			       </li>
-			       <li class="list-group-item">
-			           <div class="row">
-			               <div class="col-xs-4 col-xs-height col-full-height">Prescriptions</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$20-$100</div>
-			               <div class="col-xs-4 col-xs-height col-full-height">$20-$100</div>
-			           </div>
-			       </li>
-			    </ul>
-		    </div>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Doctor Visits</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$45-$150</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">50%</div>
+	           </div>
+	       </li>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Prescriptions</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$20-$100</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$20-$100</div>
+	           </div>
+	       </li>
+	    </ul>
+    </div>
 		    <div class="panel panel-default">
 			    <div class="panel-heading chevron-toggle collapsed" data-toggle="collapse" data-target="#collapseVisitsList2">
 			      <h3 class="panel-title">Doctor Visits</h3>
@@ -519,8 +521,60 @@
 	<div class="plan" id="planC">
 		<span class="recommend">We Recommend</span>
 		<div class="col-header">Plan C</div>
-		<a class="plan-select" href="">Choose</a>
+		<div class="h4 no-m-bottom"><a href="/details" class="btn btn-success">Select</a></div>
+		<div class="panel panel-group">
+<div class="panel panel-default">
+	    <div class="panel-heading chevron-toggle" data-toggle="collapse" data-target="#collapseOverviewList">
+	      <h3 class="panel-title">Plan Overview</h3>
+	    </div>
+	    <ul id="collapseOverviewList" class="list-group collapse in">
 
+	    	<li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">PPO Plan</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">In Network</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">Out of Network</div>
+	           </div>
+	       </li>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Deductible</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$5,000</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$6,000</div>
+	           </div>
+	       </li>
+	       
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Maximum Out-of-Pocket</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$6,500</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$8,000</div>
+	           </div>
+	       </li>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Coinsurance</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">20%</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">50%</div>
+	           </div>
+	       </li>
+
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Doctor Visits</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$45-$150</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">50%</div>
+	           </div>
+	       </li>
+	       <li class="list-group-item">
+	           <div class="row">
+	               <div class="col-xs-4 col-xs-height col-full-height">Prescriptions</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$20-$100</div>
+	               <div class="col-xs-4 col-xs-height col-full-height">$20-$100</div>
+	           </div>
+	       </li>
+	    </ul>
+    </div>
 		<div class="panel panel-group">
 			 <div class="panel panel-default">
 			    <div class="panel-heading chevron-toggle collapsed" data-toggle="collapse" data-target="#collapseOverviewList3">
