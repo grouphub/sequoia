@@ -1,0 +1,69 @@
+<h3>Select the doctor that you want</h3>
+
+<form>
+  <input type="search" class="form-control" id="InputEmail" ng-change="search()" ng-model="form.query" placeholder="Search for a doctor&hellip;">
+</form>
+
+<div class="doctors-row">
+  <div class="col-md-3 doctors-profile">
+    <img ng-if="currentDoctor" class="profile-image img-rounded" ng-if="currentDoctor.profile.image_url" ng-src="{{currentDoctor.profile.image_url}}">
+
+    <div ng-if="currentDoctor" class="doctor-name">{{name(currentDoctor)}}</div>
+
+    <a ng-if="currentDoctor" class="btn btn-success" ng-click="callDoctor(currentDoctor)">Call Doctor</a>
+
+    <dl ng-if="currentDoctor">
+      <dt ng-if="rate(currentDoctor)">Rating</dt>
+      <dd ng-if="rate(currentDoctor)" ng-bind-html="rate(currentDoctor)"></dd>
+
+      <dt ng-if="currentDoctor.profile.gender">Gender</dt>
+      <dd ng-if="currentDoctor.profile.gender">{{currentDoctor.profile.gender | capitalize}}</dd>
+
+      <dt ng-if="currentDoctor.specialties">Specialties</dt>
+      <dd ng-if="currentDoctor.specialties">
+        {{specialties(currentDoctor)}}
+      </dd>
+
+      <dt ng-if="languages(currentDoctor)">Languages</dt>
+      <dd ng-if="languages(currentDoctor)">
+        {{languages(currentDoctor)}}
+      </dd>
+
+      <dt ng-if="practices(currentDoctor)">Practices</dt>
+      <dd class="line-height-smaller" ng-if="practices(currentDoctor)" ng-bind-html="practices(currentDoctor)"></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-9">
+    <table class="table table-condensed table-bordered table-striped doctor-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Specialties</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="doctor" ng-repeat="doctor in topDoctors" ng-class="{current: doctor === currentDoctor}" ng-click="doctorClicked(doctor)" ng-mouseover="doctorHovered(doctor)">
+          <td>{{name(doctor)}}</td>
+          <td>{{specialties(doctor)}}</td>
+          <td ng-bind-html="rate(doctor)"></td>
+        </tr>
+
+        <tr>
+          <td class="more" colspan="2">
+            <a href="" class="btn btn-default btn-xs" ng-class="{disabled: offset === 0}" ng-click="previousDoctors();">Previous</a>
+            <a href="" class="btn btn-default btn-xs" ng-class="{disabled: offset + 10 >= plans.doctors.length}" ng-click="nextDoctors();">Next</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="doctors-btn">
+  <button type="submit" class="btn btn-success" ng-click="submit()">Next</button>
+  <button type="submit" class="btn btn-warning" ng-click="skip()">Skip this step</button>
+</div>
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+
+    <title><%= title %></title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Library Styles -->
+    <link rel="stylesheet" href="/stylesheets/lib/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/lib/font-awesome.css">
+
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="/stylesheets/app/loader.css">
+    <link rel="stylesheet" href="/stylesheets/app/navigation.css">
+    <link rel="stylesheet" href="/stylesheets/app/global.css">
+    <link rel="stylesheet" href="/stylesheets/app/home.css">
+
+
+
+    <script>
+      window.picker = {
+        user: <%- JSON.stringify(user) %>,
+        flashes: []
+      };
+    </script>
+
+    <!-- Libraries -->
+    <script src="/javascripts/lib/underscore.js"></script>
+    <script src="/javascripts/lib/eventemitter-2.js"></script>
+    <script src="/javascripts/lib/jquery.js"></script>
+    <script src="/javascripts/lib/angular.js"></script>
+    <script src="/javascripts/lib/angular-route.js"></script>
+    <script src="/javascripts/lib/angular-cookies.js"></script>
+    <script src="/javascripts/lib/angular-sanitize.js"></script>
+    <script src="/javascripts/lib/bootstrap.js"></script>
+    <script src="/javascripts/lib/sinch/sinch.min.js"></script>
+
+    <!-- Application Code -->
+    <script src="/javascripts/app/app.js"></script>
+    <script src="/javascripts/app/filters/capitalize-filter.js"></script>
+    <script src="/javascripts/app/factories/events-factory.js"></script>
+    <script src="/javascripts/app/factories/flashes-factory.js"></script>
+    <script src="/javascripts/app/controllers/main-controller.js"></script>
+    <script src="/javascripts/app/controllers/home-controller.js"></script>
+    <script src="/javascripts/app/controllers/dashboard-controller.js"></script>
+    <script src="/javascripts/app/controllers/users-new-controller.js"></script>
+    <script src="/javascripts/app/controllers/users-signin-controller.js"></script>
+    <script src="/javascripts/app/controllers/users-show-controller.js"></script>
+    <script src="/javascripts/app/controllers/signup-controller.js"></script>
+    <script src="/javascripts/app/controllers/basic-controller.js"></script>
+    <script src="/javascripts/app/controllers/doctors-controller.js"></script>
+    <script src="/javascripts/app/controllers/recommendations-controller.js"></script>
+    <script src="/javascripts/app/controllers/details-controller.js"></script>
+    <script src="/javascripts/app/controllers/success-controller.js"></script>
+    <script src="/javascripts/app/controllers/connect-controller.js"></script>
+    <script src="/javascripts/app/router.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60445010-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+
+  <body ng-app="pickerApp" ng-controller="MainController" ng-cloak>
+    <header class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".picker-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="/" class="navbar-brand">
+            <img src="/images/logo.png">
+          </a>
+        </div>
+
+        <nav class="collapse navbar-collapse picker-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <!-- User is not signed in -->
+
+            <li ng-if="!isSignedin()">
+              <a href="/signup">Get Started</a>
+            </li>
+
+            <li ng-if="!isSignedin()">
+              <a href="/users/signin">Sign In</a>
+            </li>
+
+            <li ng-if="!isSignedin()">
+              <a href="/users/new">Sign Up</a>
+            </li>
+
+            <!-- User is signed in -->
+
+            <li ng-if="isSignedin()">
+              <a href="/basic">Get Started</a>
+            </li>
+
+            <li ng-if="isSignedin()">
+              <a href="/users/{{currentUser()._id}}">Account</a>
+            </li>
+
+            <li ng-if="isSignedin()">
+              <a href="" ng-click="signout()">Sign Out</a>
+            </li>
+
+            <li ng-if="isSignedin()">
+              <a href="/connect">Connect</a>
+            </li>
+
+            <li class="broker-button">
+              <a href="" ng-click="callBroker()">Chat with a broker</a>
+
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="jumbotron" ng-if="jumbotron === 'home'">
+      <div class="row>">
+        <h1>Heath insurance enrollment made easy.</h1>
+        <h2>Use our plan picker to find the best plan for you!</h2>
+      </div>
+
+      <a class="btn btn-success btn-lg" href="/basic" role="button" ng-if="isSignedin()">Get Started Now</a>
+      <a class="btn btn-success btn-lg" href="/signup" role="button" ng-if="!isSignedin()">Get Started Now</a>
+    </div>
+
+    <div class="jumbotron" ng-if="jumbotron === 'home'">
+      <div class="row sub-jumbotron">
+        <h2>&#45; Complete enrollment in seconds &#45;</h2>
+        <p>With GroupHub, validate and submit enrollment applications to insurance carriers with the click of a button. You can check on application status in real time and be alerted the moment it's approved.</p>
+      </div>
+    </div>
+
+    <div class="jumbotron" ng-if="jumbotron === 'signup'">
+      <h1>Let's start now</h1>
+      <h2>Answer a few easy questions, and you will have health care!</h2>
+    </div>
+
+    <div class="jumbotron" ng-if="jumbotron === 'success'">
+      <h1>Congratulations!</h1>
+      <h2>Welcome to the new new era of health care.</h2>
+    </div>
+
+     <div class="jumbotron" ng-if="jumbotron === 'dashboard'">
+      <div class="row>">
+        <h1>Welcome to your person health portal</h1>
+        <h2>Use our plan picker to find the best plan for you!</h2>
+      </div>
+
+      <a class="btn btn-success btn-lg" href="/basic" role="button" ng-if="isSignedin()">Get Started Now</a>
+      <a class="btn btn-success btn-lg" href="/signup" role="button" ng-if="!isSignedin()">Get Started Now</a>
+    </div>
+
+    <main ng-class="{loading: isLoading}">
+      <div class="container loader">
+        <div class="col-sm-12">
+          <div class="row spinner-container">
+            <img class="spinner" src="/images/spinner.gif">
+          </div>
+        </div>
+      </div>
+
+      <div class="container alerts">
+        <div class="col-sm-12">
+          <div class="row alert alert-{{flash.type}}" data-kind="{{flash.type}}" ng-repeat="flash in flashes">
+            <button class="close">×</button>
+            <span class="message">{{flash.message}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container content" ng-view>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row">
+            &copy; 2015, Grouphub Inc.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

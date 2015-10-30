@@ -1,0 +1,71 @@
+.navbar {
+  background: linear-gradient(180deg, #057ff4, #02417d 100%);
+  background-color: #003c82;
+  border-bottom: none;
+}
+
+.navbar button.navbar-toggle {
+  border: 1px solid #82c2fd;
+}
+
+.navbar button.navbar-toggle span.icon-bar {
+  background-color: #82c2fd;
+}
+
+.navbar button.navbar-toggle:hover span.icon-bar,
+.navbar button.navbar-toggle:focus span.icon-bar {
+  background-color: #057ff4;
+}
+
+.navbar button.navbar-toggle:hover,
+.navbar button.navbar-toggle:focus {
+  background-color: #82c2fd;
+}
+
+.navbar button.navbar-toggle:hover span,
+.navbar button.navbar-toggle:focus span {
+  background-color: #057ff4;
+}
+
+.navbar .container li a,
+.navbar .container .navbar-header a {
+  color: #82c2fd;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    background: initial;
+    background-color: #02417d;
+  }
+
+  .navbar-header {
+    background: linear-gradient(180deg, #057ff4, #02417d 100%);
+  }
+
+  .navbar .container .navbar-collapse {
+    border-top: 1px solid #82c2fd;
+  }
+}
+
+@media (min-width: 768px) {
+  .broker-button a {
+    padding-top: 6px !important;
+    padding-bottom: 3px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 9px !important;
+    margin-bottom: 10px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    border: 1px solid #82c2fd !important;
+    border-radius: 5px !important;
+  }
+
+  .broker-button a:hover,
+  .broker-button a:active {
+    background-color: #82c2fd !important;
+    color: #057ff4 !important;
+    text-shadow: none !important;
+  }
+}
+

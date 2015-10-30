@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="col-sm-12">
+    <div class="row">
+      <h2>Plan Recommendations</h2>
+
+      <div class="row" ng-repeat="plan in topPlans">
+        <div class="col-md-12">
+          <h3 title="resource title" class="media-heading">
+            <a ng-href="{{plan.benefits_summary_url}}">{{tradingPartnerName(plan)}}</a>
+          </h3>
+        </div>
+
+        <div class="col-sm-2 text-center">
+          <div class="well well-sm">
+            <h2>${{premiumCost(plan)}}</h2>
+            <h3>Per Month</h3>
+          </div>
+        </div>
+
+        <div class="col-sm-10">
+          <p class="small">
+            <a ng-href="{{plan.benefits_summary_url}}"><i class="fa fa-thumbs-up"></i> {{plan.plan_name}}</a>
+            &nbsp;&nbsp;
+            <a ng-href="{{plan.benefits_summary_url}}"><i class="fa fa-star"></i> Website</a>
+          </p>
+
+          <span title="heading">
+            <strong>$4,500 Deductable</strong>
+          </span>
+
+          <div class="view-details">
+            <a href="" class="btn btn-xs btn-primary" ng-click="pickPlan(plan)">View Details</a>
+          </div>
+        </div>
+
+        <hr ng-if="$index < topPlans.length - 1">
+      </div>
+    </div>
+  </div>
+</div>
+
