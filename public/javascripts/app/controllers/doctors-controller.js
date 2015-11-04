@@ -157,8 +157,8 @@ app.controller('DoctorsController', [
       $location.path('/recommendations')
     };
 
-    age = '35';//$cookieStore.get('age');
-    zipcode = '99507';//$cookieStore.get('zipcode');
+    age = $cookieStore.get('age');
+    zipcode = $cookieStore.get('zipcode');
 
     if (!picker.user) {
       // ...
